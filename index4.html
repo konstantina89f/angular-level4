@@ -20,7 +20,16 @@
         <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
 
         <!-- Image Gallery  -->
-      <product-gallery></product-gallery>
+        <div ng-controller="GalleryController as gallery"  ng-show="product.images.length">
+          <div class="img-wrap">
+            <img ng-src="{{product.images[gallery.current]}}" />
+          </div>
+          <ul class="img-thumbnails clearfix">
+            <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+              <img ng-src="{{image}}" />
+            </li>
+          </ul>
+        </div>
 
         <!-- Product Tabs  -->
         <product-tabs></product-tabs>
