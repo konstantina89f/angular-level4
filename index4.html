@@ -4,9 +4,12 @@
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app4.js"></script>
+	<script src="jquery.js"></script> 
   </head>
 
   <body ng-controller="StoreController as store">
+	<div ng-include="'product-reviews.html'"></div>
+	<div ng-include="'product-tabs.html'"></div>
     <!--  Store Header  -->
     <header>
       <h1 class="text-center">Flatlander Crafted Gems</h1>
